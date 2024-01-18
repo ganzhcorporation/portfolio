@@ -1,0 +1,277 @@
+@import url(./reset.css);
+
+:root{
+    --main-color:blueviolet;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+nav{
+    background-color: black;
+    color: aliceblue;
+    padding:20px 0 ;
+}
+.logo{
+    font-size: 30px;
+}
+nav a{
+    color: aliceblue;
+    transition: 0.5s;
+}
+nav a:hover{
+    cursor: pointer;
+    color:var(--main-color);
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px; ;
+}
+.nav-list_link--active{
+    position: relative;
+}
+.nav-list_link--active::after{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color:var(--main-color);
+    width: 100%;
+    bottom: -2;
+}
+/*header*/
+header{
+    background-color: black;
+    /* background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto; */
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    min-height: 695px;
+
+}
+.header-wrapper {
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+
+}
+h1{
+    font-size: 46px;
+    font-weight: 600;
+}
+h1 span{
+    color: var(--main-color);
+}
+header h2{
+    font-size: 38px;
+}
+header p{
+    font-size: 16px;
+}
+.header-btn {
+    padding: 6px 15px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.header-btn:active{
+    position: relative;
+    top: 1px;
+}
+.header-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/*main*/
+
+main{
+    /* padding: min(30px); */
+    padding: clamp(30px,15%,170px);
+}
+main h3{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+main h4{
+    color:black;
+    font-size: 20px;
+    
+}
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-card{
+    min-width: 200px;
+    text-align: center;
+    transition: 0.9s;
+}
+.project-card:hover{
+    position: relative;
+    top: 10px;
+}
+.project-card img{
+    border-radius: 5px;
+    width: 100%;
+}
+
+/*footer*/
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+.footer-social {
+    padding: 30px;
+}
+.footer-social ul{
+    display: flex;
+    gap: 20px;
+} 
+.footer-link {
+    display: block;
+    transition: 0.4s;
+}
+.footer-link:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+/*skills*/
+.icons-wrapper {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-evenly;
+    position: absolute;
+}
+.icon-css{
+    position: relative;
+    display: inline-block;
+    animation: animaCss 5s linear 0s infinite alternate-reverse none;
+}
+@keyframes animaCss {
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 250px;
+    }
+}
+
+.icon-js {
+    position: relative;
+    display: inline-block;
+    animation: animaJs 6s linear 0s infinite alternate-reverse none;
+}
+@keyframes animaJs {
+    0%{
+        top: -150px;
+    }
+    100%{
+        top: 250px;
+    }
+}
+.icon-react {
+    position: relative;
+    display: inline-block;
+    animation: animaReact 4s linear 0s infinite alternate-reverse none;
+}
+@keyframes animaReact {
+    0%{
+        top: 100px;
+    }
+    100%{
+        top: 250px;
+    }
+}
+.icon-git {
+    position: relative;
+    display: inline-block;
+    animation: animaGit 6s ease 0s infinite alternate-reverse none;
+}
+@keyframes animaGit {
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 100px;
+    }
+}
+.icon-ts {
+    position: relative;
+    display: inline-block;
+    animation: animaTs 5s ease-in 0s infinite alternate-reverse none;
+}
+@keyframes animaTs {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 250px;
+    }
+}
+.frontend-Title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 900;
+
+    
+}
+.frontend-stack{
+    text-align: center;
+    font-size: 20px;
+}
+
+.logomail{
+    margin-top: 40px;
+}
+.whats-tele{
+    text-align: center;
+    font-size: x-large;
+}
+.whats-tele_link{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+.logomail {
+    text-align: center;
+    font-size: x-large;
+}
+.whats-tele_link:hover{
+    color:var(--main-color);
+}
+.logomail_link{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+.logomail_link:hover{
+color:var(--main-color);
+}
